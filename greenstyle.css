@@ -1,31 +1,43 @@
 html
 {
 	scroll-behavior: smooth;
+	margin: 0px auto;
+	max-width: 1400px;
+	width: 100%;
+}
+
+*{
+	box-sizing: border-box;
 }
 
 body
 {
-	margin: 0px;
 	color: #3b3b37;
 	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding: 0px;
+	margin: 0px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 /* En tête avec image */
 
-section.top-page
+
+header
 {
 	background: url(1.jpg.jpg) fixed no-repeat;
 	background-position: center;
 	background-size: cover;
 	height: 600px;
-	margin: 10px;
+	margin: 10px 0px;
 }
 
-header
+section.top-page
 {
 	display: flex;
-	width: 100%;
-	height: 60px;
 	align-items: center;
 }
 
@@ -34,8 +46,6 @@ nav.nav, .nav2
 	display: flex;
 	justify-content: flex-end;
 	width: 100%;
-	align-items: center;
-
 }
 
 p.nom
@@ -45,7 +55,10 @@ p.nom
 	padding: 15px;
 }
 
+a:hover button{
+border: 2px solid #3b3b37;
 
+}
 
 button
 {
@@ -58,14 +71,11 @@ button
 	width: 150px;
 	margin: 10px;
 	cursor: pointer;
-}
-
-button.bouton
-{
 	border: none;
 }
 
-div.landing-page
+
+section.landing-page
 {
 	display: flex;
 	flex-direction: column;
@@ -79,7 +89,6 @@ h1.big-title
 {
 	font-size: 60px;
 	font-weight: 300;
-
 }
 
 p.litle-text
@@ -99,17 +108,24 @@ section.derniers-articles
 	flex-direction: column;
 	align-items: center;
 	background-color: #edede8;
-	height: 650px;
+	height: 550px;
+	row-gap: 0px;
 }
 
-
+h1.title-articles{
+	margin: 0px;
+  margin-top: 25px;
+}
 
 section.articles
 {
 	display: flex;
-	justify-content: center;
 	justify-content: space-evenly;
+	gap: 10px;
 	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 25px;
 }
 
 div.articles
@@ -117,17 +133,17 @@ div.articles
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 400px;
-	width: 300px;
+	min-height: 400px;
+	max-width: 300px;
 	background-color: white;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	margin-top: 40px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+	margin-top: 25px;
 }
 
 img
 {
 	 height: 250px;
-	 width: 300px;
+	 width: 100%;
 }
 
 p.description
@@ -146,7 +162,6 @@ section.about
 {
 	height: 600px;
 	display: flex;
-	
 }
 
 img.serre
@@ -154,7 +169,7 @@ img.serre
 	background: fixed;
 	background-position: center;
 	background-size: cover;
-  width: 600px;
+  max-width: 600px;
 	height: 600px;
 }
 
@@ -169,7 +184,6 @@ div.presentation
 	justify-content: space-evenly;
 
 }
-
 
 /*  Subscribe zone */
 
@@ -204,7 +218,6 @@ input[type=submit]
   border: transparent;
 	background-color: #edede7;
 	cursor: pointer;
-
 } 
 
 /* Footer */
